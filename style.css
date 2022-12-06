@@ -67,7 +67,7 @@ header {
     line-height: 24px;
 }
 
-main {
+main>.buy-place {
     margin-left: 426px;
     margin-top : 68px;
 }
@@ -170,20 +170,94 @@ main {
     cursor    : pointer;
 }
 
-.inf-bar>.btn:focus {
-    opacity   : 1;
-    transition: 1s;
-    cursor    : pointer;
+.inf-bar>.underbtn {
+    font-family   : 'Open Sans';
+    font-style    : normal;
+    font-weight   : 600;
+    font-size     : 16px;
+    line-height   : 22px;
+    margin-top    : 15px;
+    margin-left   : 14px;
+    color         : #f1f1f1;
+    letter-spacing: .6mm;
 }
 
-.inf-bar > .underbtn {
-    font-family: 'Open Sans';
+.second-section {
+    margin-top: 72px;
+    height    : 535px;
+    background: rgba(33, 148, 255, .05);
+    z-index   : -1;
+}
+
+.text {
+    margin-top : 30px;
+    margin-left: 20px;
+    font-family: 'Russo One';
     font-style : normal;
-    font-weight: 600;
+    font-weight: 400;
+    font-size  : 36px;
+    line-height: 43px;
+    text-align : center;
+    color      : #2194FF;
+}
+
+.p-txt {
+    margin     : 46px 0 0 15px;
+    text-align : center;
+    font-family: 'Russo One';
+    font-weight: 400;
+    font-size  : 20px;
+    line-height: 24px;
+    color      : #F1F1F1;
+    opacity    : 0.7;
+}
+
+.first-flex-div {
+    margin: 4px 0 0 421px;
+    width : 259px;
+    height: 300px;
+}
+
+.first-flex-div>.txt-gaz {
+    font-family: 'Russo One';
+    font-weight: 400;
+    font-size  : 36px;
+    line-height: 43px;
+    color      : #F1F1F1;
+}
+
+.first-flex-div>.txt {
+    font-family: 'Russo One';
+    font-style : normal;
+    font-weight: 400;
+    font-size  : 24px;
+    line-height: 29px;
+    color      : #2194FF;
+}
+
+.first-flex-div>.txt1 {
+    width      : 253px;
+    white-space: inherit;
+    margin-top : 23px;
+    font-family: 'Open Sans';
+    font-weight: 300;
     font-size  : 16px;
     line-height: 22px;
-    margin-top: 15px;
-    margin-left: 14px;
-    color: #f1f1f1;
-    letter-spacing: .6mm;
+    color      : #F1F1F1;
+}
+
+.first-flex-div>button {
+    margin-top    : 26px;
+    background    : #2194FF;
+    border-radius : 50px;
+    width         : 155px;
+    height        : 43px;
+    border        : none;
+    font-family   : 'Open Sans';
+    font-weight   : 700;
+    font-size     : 18px;
+    line-height   : 25px;
+    text-align    : center;
+    color         : #F1F1F1;
+    letter-spacing: 1px;
 }
