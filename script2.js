@@ -11,11 +11,9 @@ db.transaction(function (tx) {
 
 setTimeout(function(){
     var del = prompt("Введите id человека, которому уже позвонили", 0)
-}, 3000);
-
-
-db.transaction(function(tx) {
+    db.transaction(function(tx) {
     db.transaction(function(tx) {  
         tx.executeSql('DELETE FROM r WHERE id = ?', [del], null, null)
     })
 })
+}, 3000);
