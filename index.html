@@ -13,82 +13,97 @@
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;1,300&family=Russo+One&display=swap"
         rel="stylesheet">
 </head>
-<body>
-    <header class="header">
-        <div class="top-site">
-            <img src="./image/Logo.png">
-            <div class="stick"></div>
-            <p class="logo-p">Расправь плечи<br>в теплом доме</p>
-            <p class="phone-num">+380 800 500 415</p>
-            <a href="#">Срочный вопрос</a>
+<header class="header">
+    <div class="top-site">
+        <img src="./image/Logo.png">
+        <div class="stick"></div>
+        <p class="logo-p">Расправь плечи<br>в теплом доме</p>
+        <p class="phone-num">+380 800 500 415</p>
+        <a href="./admin.html">Срочный вопрос</a>
+    </div>
+</header>
+<main class="main">
+    <section class="buy-place">
+        <div class="daynight">
+            <img src="./image/moon 1.png">
+            <img src="./image/Vector (2).png" class="arrow">
+            <img src="./image/sun 1.png" class="sun">
+            <p>В любое время дня и ночи</p>
         </div>
-    </header>
-    <main class="main">
-        <section class="buy-place">
-            <div class="daynight">
-                <img src="./image/moon 1.png">
-                <img src="./image/Vector (2).png" class="arrow">
-                <img src="./image/sun 1.png" class="sun">
-                <p>В любое время дня и ночи</p>
-            </div>
-            <div class="second-place">
-                <img src="./image/cloudy 1.png" class="cloudy">
-                <img src="./image/Vector (1).png" class="arrow">
-                <img src="./image/snowflake 1.png" class="snow">
-                <p>Вне зависимости от погодных условий</p>
-            </div>
-            <div class="inf-bar">
-                <img src="./image/1stscreen1.png" class="truck" id="truck">
-                <h1>Доставим газ<br>за 4 часа</h1>
-                <p class="topbtn">в любую точку Киева<br>и Киевскую область</p>
-                <img src="./image/Frame.png" class="arrow">
-                <button class="btn">Заказать доставку газа<br>в газгольдер</button>
-                <p class="underbtn">Доставка газа по актуальным ценам</p>
-            </div>
-        </section>
-        <section class="second-section">
-            <p style="opacity: 0;">a</p>
-            <p class="text">Стоимость газа в ваш газгольдер сегодня</p>
-            <p class="p-txt">Идеальное соотношение</p>
-            <div class="flexible-div">
-                <div class="first-flex-div">
-                    <p class="txt-gaz">Пропан</p>
-                    <p class="txt">от 14 гривен за литр</p>
-                    <p class="txt1">Физически испарение<br>происходит до -40 градусов, что позволяет использовать его в
-                        наших с вами погодных<br>условиях</p>
-                    <button>Заказать</button>
-                </div>
-                <div class="second-flex-div">
-                    <div>
-                        <h1 class="h1-1">80%</h1>
-                        <p class="txt2">пропана</p>
-                    </div>
-                    <div class="stick1"></div>
-                    <div>
-                        <h1 class="h1-2">20%</h1>
-                        <p class="txt3">бутана</p>
-                        <img src="./image/proportions 1.png" class="big-truck">
-                    </div>
-                </div>
-                <div class="third-flex-div">
-                    <p class="txt-gaz">Бутан</p>
-                    <p class="txt">от 9.5 гривен за литр</p>
-                    <p class="txt1">Испарение Бутана происходит только до 0 градусов и годится для использования в
-                        тёплое время года</p>
-                    <button>Заказать</button>
-                </div>
-            </div>
-        </section>
-        <div class="to-ns">
-            <svg width="101" height="66" viewBox="0 0 101 66" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M27 1L50.5 24.5L74 1" stroke="#2194FF" />
-                <path d="M15 9L50.5 45L86 9" stroke="#2194FF" />
-                <path d="M1 15L50.5 65L100 15" stroke="#2194FF" />
-            </svg>
+        <div class="second-place">
+            <img src="./image/cloudy 1.png" class="cloudy">
+            <img src="./image/Vector (1).png" class="arrow">
+            <img src="./image/snowflake 1.png" class="snow">
+            <p>Вне зависимости от погодных условий</p>
         </div>
-        <section class="third-section">
-            <h1 class="h1">Преимущества работы с нашей компанией</h1>
-        </section>
-    </main>
+        <div class="inf-bar">
+            <img src="./image/1stscreen1.png" class="truck" id="truck">
+            <h1>Доставим газ<br>за 4 часа</h1>
+            <p class="topbtn">в любую точку Киева<br>и Киевскую область</p>
+            <img src="./image/Frame.png" class="arrow">
+            <button class="btn" id="myBtn">Заказать доставку газа<br>в газгольдер</button>
+            <p class="underbtn">Доставка газа по актуальным ценам</p>
+        </div>
+    </section>
+
+
+    <div id="myModal" class="modal">
+        <!-- Модальное содержание -->
+        <div class="modal-content">
+            <p class="close">&times;</p>
+            <p class="pp">Доставим газ<br>за 4 часа</p>
+            <input class="nameinput" id="ni" type="text" placeholder="Введите Ваше Имя" name="text" oninput="this.value=this.value.replace(/[^а-яА-Я-ёЁ]/g,'');" required>
+            <input class="phoneinput" id="pi" type="number" placeholder="Введите Ваш Номер" name="phone-num" required>
+            <button class="button" id="inputbtn" onclick="Aboba()">Заказать доставку газа</button>
+        </div>
+    </div>
+
+
+    <section class="second-section">
+        <p style="opacity: 0;">a</p>
+        <p class="text">Стоимость газа в ваш газгольдер сегодня</p>
+        <p class="p-txt">Идеальное соотношение</p>
+        <div class="flexible-div">
+            <div class="first-flex-div">
+                <p class="txt-gaz">Пропан</p>
+                <p class="txt">от 14 гривен за литр</p>
+                <p class="txt1">Физически испарение<br>происходит до -40 градусов, что позволяет использовать его в
+                    наших с вами погодных<br>условиях</p>
+                <button>Заказать</button>
+            </div>
+            <div class="second-flex-div">
+                <div>
+                    <h1 class="h1-1">80%</h1>
+                    <p class="txt2">пропана</p>
+                </div>
+                <div class="stick1"></div>
+                <div>
+                    <h1 class="h1-2">20%</h1>
+                    <p class="txt3">бутана</p>
+                    <img src="./image/proportions 1.png" class="big-truck">
+                </div>
+            </div>
+            <div class="third-flex-div">
+                <p class="txt-gaz">Бутан</p>
+                <p class="txt">от 9.5 гривен за литр</p>
+                <p class="txt1">Испарение Бутана происходит только до 0 градусов и годится для использования в
+                    тёплое время года</p>
+                <button>Заказать</button>
+            </div>
+        </div>
+    </section>
+    <div class="to-ns">
+        <svg width="101" height="66" viewBox="0 0 101 66" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M27 1L50.5 24.5L74 1" stroke="#2194FF" />
+            <path d="M15 9L50.5 45L86 9" stroke="#2194FF" />
+            <path d="M1 15L50.5 65L100 15" stroke="#2194FF" />
+        </svg>
+    </div>
+    <section class="third-section">
+        <h1 class="h1">Преимущества работы с нашей компанией</h1>
+    </section>
+</main>
+<script src="./script.js"></script>
 </body>
+
 </html>
